@@ -1,0 +1,25 @@
+body {
+    background-color: #6F6866;
+    text-align: center;
+    color: #38302E;
+    font-family: 'Indie Flower', cursive;
+}
+
+img {
+    border-radius: 25px;
+    border: 5px solid #38302E;
+}
+
+h1 {
+    font-size: 60px;
+    text-decoration: underline;
+    margin-bottom: 0px;
+}
+
+div {
+    padding-top: 20px;
+}
+
+h2 {
+    margin-bottom: 0px;
+}
