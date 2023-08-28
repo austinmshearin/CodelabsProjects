@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dogs-list">
+
+    </div>
+    <script>
+        const name = "chris";
+        const username = "chrisoncode";
+
+        // if statement
+        if (name == "chris") {
+            console.log("Hello");
+        }
+        else if (name == "nick") {
+            console.log("Test");
+        }
+        else {
+            console.log("Bye");
+        }
+
+        // user input
+        // const userInput = prompt("What is your name?");
+        // console.log(userInput);
+
+        // for loop
+        const dogsList = document.querySelector(".dogs-list");
+        const dogs = [
+            { name: "bruce", type: "chihuahua" },
+            { name: "chance", type: "bernese" }
+        ];
+        for (let i = 0; i < dogs.length; i++) {
+            const dog = dogs[i];
+            const dogData = document.createElement("div");
+            dogData.classList.add("jumbotron", "text-center");
+            dogData.innerText = `${dog.name} is a ${dog.type}`;
+            dogsList.appendChild(dogData);
+        }
+
+        // while loop
+        let i = 0;
+        while (i < dogs.length) {
+            const dog = dogs[i];
+            const dogData = document.createElement("div");
+            dogData.classList.add("jumbotron", "text-center");
+            dogData.innerText = `${dog.name} is a ${dog.type}`;
+            dogsList.appendChild(dogData);
+            i++;
+        }
+
+        // do while loop
+        let j = 0;
+        do {
+            const dog = dogs[j];
+            const dogData = document.createElement("div");
+            dogData.classList.add("jumbotron", "text-center");
+            dogData.innerText = `${dog.name} is a ${dog.type}`;
+            dogsList.appendChild(dogData);
+            j++;
+        } while (j < dogs.length);
+
+        // for ... of iterator
+        for (let dog of dogs) {
+            const dogData = document.createElement("div");
+            dogData.classList.add("jumbotron", "text-center");
+            dogData.innerText = `${dog.name} is a ${dog.type}`;
+            dogsList.appendChild(dogData);
+        }
+
+    </script>
+</body>
+
+</html>
