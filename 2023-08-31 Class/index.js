@@ -63,18 +63,19 @@ currentUser = {
     occupation: "Data Scientist"
 }
 function outputUser() {
-    userDiv = document.querySelector(".user-details");
-    ul = document.createElement("ul");
-    userDiv.appendChild(ul);
-    nameli = document.createElement("li");
-    nameli.innerText = `name: ${currentUser.name}`;
-    ul.appendChild(nameli);
-    ageli = document.createElement("li");
-    ageli.innerText = `age: ${currentUser.age}`;
-    ul.appendChild(ageli);
-    occupationli = document.createElement("li");
-    occupationli.innerText = `occupation: ${currentUser.occupation}`;
-    ul.appendChild(occupationli);
+    // userDiv = document.querySelector(".user-details");
+    // ul = document.createElement("ul");
+    // userDiv.appendChild(ul);
+    // nameli = document.createElement("li");
+    // nameli.innerText = `name: ${currentUser.name}`;
+    // ul.appendChild(nameli);
+    // ageli = document.createElement("li");
+    // ageli.innerText = `age: ${currentUser.age}`;
+    // ul.appendChild(ageli);
+    // occupationli = document.createElement("li");
+    // occupationli.innerText = `occupation: ${currentUser.occupation}`;
+    // ul.appendChild(occupationli);
+    console.log(currentUser);
 }
 
 // Exercise 12
@@ -92,3 +93,50 @@ function outputObject(obj) {
     return output
 }
 console.log(outputObject(demoObject));
+
+// Exercise 13
+function reverseWords(text) {
+    return text.split(" ").reverse().join(" ");
+}
+console.log(reverseWords("This is a sentence"));
+
+// Exercise 14
+
+
+// Exercise 15
+function anagram(word1, word2) {
+    if (word1 == reverseString(word2)) {
+        return true
+    }
+    else
+    {
+        return false
+    }
+}
+console.log(anagram("watson", "nostaw"));
+
+// Exercise 16
+
+
+// Exercise 17
+function palindrome(text) {
+    text = text.toLowerCase()
+    text = text.replaceAll(" ", "");
+    text = text.replaceAll(",", "");
+    text = text.replaceAll(".", "");
+    text = text.replaceAll("!", "");
+    text = text.replaceAll("?", "");
+    text = text.replaceAll("'", "");
+    if (text == reverseString(text)) {
+        return true
+    }
+    else
+    {
+        return false
+    }
+}
+console.log(palindrome("Never odd or even"));
+console.log(palindrome("Madam in Eden, I'm Adam"));
+console.log(palindrome("I am Watson!"));
+
+// Exercise 18
