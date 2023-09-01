@@ -101,3 +101,13 @@ for (let food of foods) {
     foodItem.innerText = `${food.foodName}: \$${food.price}`;
     foodList.appendChild(foodItem);
 }
+
+// Exercise 13
+function arrayOfMultiplies(num, len) {
+    output = [];
+    for (let i = 1; i <= len; i++) {
+        output.push(num * i)
+    }
+    return output
+}
+console.log(arrayOfMultiplies(2, 10));
