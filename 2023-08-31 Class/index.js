@@ -63,19 +63,18 @@ currentUser = {
     occupation: "Data Scientist"
 }
 function outputUser() {
-    // userDiv = document.querySelector(".user-details");
-    // ul = document.createElement("ul");
-    // userDiv.appendChild(ul);
-    // nameli = document.createElement("li");
-    // nameli.innerText = `name: ${currentUser.name}`;
-    // ul.appendChild(nameli);
-    // ageli = document.createElement("li");
-    // ageli.innerText = `age: ${currentUser.age}`;
-    // ul.appendChild(ageli);
-    // occupationli = document.createElement("li");
-    // occupationli.innerText = `occupation: ${currentUser.occupation}`;
-    // ul.appendChild(occupationli);
-    console.log(currentUser);
+    userDiv = document.querySelector(".user-details");
+    ul = document.createElement("ul");
+    userDiv.appendChild(ul);
+    nameli = document.createElement("li");
+    nameli.innerText = `name: ${currentUser.name}`;
+    ul.appendChild(nameli);
+    ageli = document.createElement("li");
+    ageli.innerText = `age: ${currentUser.age}`;
+    ul.appendChild(ageli);
+    occupationli = document.createElement("li");
+    occupationli.innerText = `occupation: ${currentUser.occupation}`;
+    ul.appendChild(occupationli);
 }
 
 // Exercise 12
