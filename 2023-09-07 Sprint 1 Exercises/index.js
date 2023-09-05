@@ -21,6 +21,8 @@ console.log(`Sum: ${twoNumSum(2,3)}`);
 
 console.groupEnd();
 
+
+
 // Mastering Basic Arrow Functions in JavaScript
 console.groupCollapsed("Mastering Basic Arrow Functions");
 
@@ -35,5 +37,26 @@ console.log(textUpper("Test text"));
 // A function with a single parameter, calculating the square of the provided number
 let numSquare = num => num * num;
 console.log(numSquare(4));
+
+console.groupEnd();
+
+
+
+// Understanding and Utilizing Objects in JavaScript
+console.group("Understanding Objects in JavaScript");
+
+book = {
+    "title": "The Book",
+    "author": "The Author",
+    "publication year": "0",
+    "genre": "Literal"
+}
+console.log(book.read);
+book.read = true;
+console.log(book.read);
+book.read = false;
+console.log(book.read);
+delete book.read;
+console.log(book.read);
 
 console.groupEnd();
