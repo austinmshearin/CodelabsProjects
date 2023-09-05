@@ -1,4 +1,4 @@
-// Understanding Basic Functions in JavaScript
+// *** Understanding Basic Functions in JavaScript ***
 console.groupCollapsed("Understanding Basic Functions");
 
 // A no-parameter function displaying a greeting
@@ -23,7 +23,7 @@ console.groupEnd();
 
 
 
-// Mastering Basic Arrow Functions in JavaScript
+// *** Mastering Basic Arrow Functions in JavaScript ***
 console.groupCollapsed("Mastering Basic Arrow Functions");
 
 // A function that accepts two arguments and returns their product
@@ -42,8 +42,8 @@ console.groupEnd();
 
 
 
-// Understanding and Utilizing Objects in JavaScript
-console.group("Understanding Objects in JavaScript");
+// *** Understanding and Utilizing Objects in JavaScript ***
+console.groupCollapsed("Understanding and Utilizing Objects");
 
 book = {
     "title": "The Book",
@@ -58,5 +58,51 @@ book.read = false;
 console.log(book.read);
 delete book.read;
 console.log(book.read);
+
+console.groupEnd();
+
+
+
+// *** Mastering Functions and Objects  in JavaScript***
+console.group("Mastering Functions and Objects");
+
+// Exercise 1: Create a function named greetUser that takes a name as a parameter and returns a greeting message
+function greetUser(userName) {
+    console.log(`Hello, ${userName}`);
+};
+greetUser("Jeff");
+
+// Exercise 3: Create an arrow function that calculates the area of a rectangle. It should take the length and breadth as parameters
+let areaRectangle = (length, width) => length * width;
+console.log(areaRectangle(3,4));
+
+// Exercise 4: Object Creation and Manipulation
+student = {
+    name: "Bozo",
+    age: "5",
+    grade: "1st",
+    details: function() {
+        return `${this.name} is ${this.age} years old and is in ${this.grade} grade`
+    }
+}
+console.log(student.details());
+
+// Exercise 5: Advanced Object Methods
+library = {
+    books: [],
+    addBook: function(bookName) {
+        this.books.push(bookName);
+    },
+    removeBook: function(bookName) {
+        let removeIndex = this.books.indexOf(bookName);
+        this.books.splice(removeIndex, 1);
+    }
+}
+library.addBook("Bible");
+library.addBook("Calculus");
+library.addBook("Physics");
+console.log(library.books);
+library.removeBook("Calculus");
+console.log(library.books);
 
 console.groupEnd();
