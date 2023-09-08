@@ -34,7 +34,7 @@ function outerFunction() {
         console.log(x);
     };
 }
-testClosureFunction = outerFunction();
+let testClosureFunction = outerFunction();
 testClosureFunction();
 console.groupEnd();
 
@@ -67,7 +67,7 @@ function functionFactory(myName) {
         console.log(`My name is ${myName}`);
     };
 }
-nameFunction = functionFactory("Austin");
+let nameFunction = functionFactory("Austin");
 nameFunction();
 console.groupEnd();
 
@@ -89,7 +89,7 @@ function setupCounter() {
         console.log(count);
     };
 }
-counter = setupCounter();
+let counter = setupCounter();
 counter();
 counter();
 counter();
@@ -108,7 +108,7 @@ function setupResetingCounter() {
         console.log(count);
     };
 }
-resettingCounter = setupResetingCounter();
+let resettingCounter = setupResetingCounter();
 for (let i = 1; i <= 30; i++) {
     resettingCounter();
 }
