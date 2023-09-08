@@ -59,3 +59,14 @@ console.log(globalVar); // Molli
 localScopeTest();
 console.log(globalVar); // Molli
 console.groupEnd();
+
+// Exercise #5
+console.groupCollapsed("Function Factory");
+function functionFactory(myName) {
+    return function() {
+        console.log(`My name is ${myName}`);
+    }
+}
+nameFunction = functionFactory("Austin");
+nameFunction();
+console.groupEnd();
