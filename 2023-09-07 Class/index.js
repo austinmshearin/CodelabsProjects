@@ -37,3 +37,25 @@ function outerFunction() {
 testClosureFunction = outerFunction();
 testClosureFunction();
 console.groupEnd();
+
+// Exercise #4
+console.groupCollapsed("Local and Global Scope");
+// Declare a global variable here
+let globalVar = "Austin";
+function modifyGlobal() {
+    // Try to modify the global variable here
+    globalVar = "Molli";
+    console.log(globalVar) // Molli
+}
+function localScopeTest() {
+    // Declare a local variable with the same name as the global variable
+    let globalVar = "Watson";
+    console.log(globalVar); // Watson
+}
+// Call both functions here
+console.log(globalVar); // Austin
+modifyGlobal();
+console.log(globalVar); // Molli
+localScopeTest();
+console.log(globalVar); // Molli
+console.groupEnd();
