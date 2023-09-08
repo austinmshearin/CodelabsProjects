@@ -79,3 +79,18 @@ function hoistingTest() {
 }
 hoistingTest();
 console.groupEnd();
+
+// Exercise #7
+console.group("Counter Closure");
+function setupCounter() {
+    let count = 0;
+    return function() {
+        count++;
+        console.log(count);
+    }
+}
+counter = setupCounter();
+counter();
+counter();
+counter();
+console.groupEnd();
