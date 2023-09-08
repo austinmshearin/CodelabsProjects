@@ -96,7 +96,7 @@ counter();
 console.groupEnd();
 
 // Exercise #8
-console.group("Scope, Hoisting, and Closures");
+console.groupCollapsed("Scope, Hoisting, and Closures");
 function setupResetingCounter() {
     let count = 0;
     return function () {
