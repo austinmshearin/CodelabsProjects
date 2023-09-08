@@ -30,7 +30,7 @@ console.groupEnd();
 console.groupCollapsed("Basic Closure");
 function outerFunction() {
     const x = "123";
-    return function innerFunction(){
+    return function(){
         console.log(x);
     }
 }
