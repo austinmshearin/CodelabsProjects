@@ -25,3 +25,15 @@ function mainFunction() {
 }
 mainFunction();
 console.groupEnd();
+
+// Exercise #3
+console.groupCollapsed("Basic Closure");
+function outerFunction() {
+    const x = "123";
+    return function innerFunction(){
+        console.log(x);
+    }
+}
+testClosureFunction = outerFunction();
+testClosureFunction();
+console.groupEnd();
