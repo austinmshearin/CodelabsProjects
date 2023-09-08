@@ -30,9 +30,9 @@ console.groupEnd();
 console.groupCollapsed("Basic Closure");
 function outerFunction() {
     const x = "123";
-    return function(){
+    return function () {
         console.log(x);
-    }
+    };
 }
 testClosureFunction = outerFunction();
 testClosureFunction();
@@ -45,7 +45,7 @@ let globalVar = "Austin";
 function modifyGlobal() {
     // Try to modify the global variable here
     globalVar = "Molli";
-    console.log(globalVar) // Molli
+    console.log(globalVar); // Molli
 }
 function localScopeTest() {
     // Declare a local variable with the same name as the global variable
@@ -63,9 +63,9 @@ console.groupEnd();
 // Exercise #5
 console.groupCollapsed("Function Factory");
 function functionFactory(myName) {
-    return function() {
+    return function () {
         console.log(`My name is ${myName}`);
-    }
+    };
 }
 nameFunction = functionFactory("Austin");
 nameFunction();
@@ -81,16 +81,35 @@ hoistingTest();
 console.groupEnd();
 
 // Exercise #7
-console.group("Counter Closure");
+console.groupCollapsed("Counter Closure");
 function setupCounter() {
     let count = 0;
-    return function() {
+    return function () {
         count++;
         console.log(count);
-    }
+    };
 }
 counter = setupCounter();
 counter();
 counter();
 counter();
+console.groupEnd();
+
+// Exercise #8
+console.group("Scope, Hoisting, and Closures");
+function setupResetingCounter() {
+    let count = 0;
+    return function () {
+        if (count == 10) {
+            count = 1;
+        } else {
+            count++;
+        }
+        console.log(count);
+    };
+}
+resettingCounter = setupResetingCounter();
+for (let i = 1; i <= 30; i++) {
+    resettingCounter();
+}
 console.groupEnd();
