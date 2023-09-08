@@ -70,3 +70,12 @@ function functionFactory(myName) {
 nameFunction = functionFactory("Austin");
 nameFunction();
 console.groupEnd();
+
+// Exercise #6
+console.groupCollapsed("Hoisting Variable");
+function hoistingTest() {
+    // console.log(x); // Reference Error
+    let x = "Test";
+}
+hoistingTest();
+console.groupEnd();
