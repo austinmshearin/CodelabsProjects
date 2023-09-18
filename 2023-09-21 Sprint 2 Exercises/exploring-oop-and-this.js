@@ -34,3 +34,31 @@ objectArrow.method();
 // Exercise #3
 // Implement inheritance by creating a subclass "ElectricCar" derived from the "Car" class, adding properties like batteryLife.
 // For the "ElectricCar" class, override the displayInfo method to also include battery life information.
+class ElectricCar extends Car {
+    constructor(make, model, year, batteryLife) {
+        super(make, model, year);
+        this.batteryLife = batteryLife;
+    }
+    displayInfo() {
+        return `${this.year} ${this.make} ${this.model} w/ ${this.batteryLife}`;
+    }
+}
+
+let myEV = new ElectricCar("Tesla", "Truck", 2023, 100);
+console.log(myEV.displayInfo())
+
+// Exercise #4
+// Design a class "Student". Create an instance method that uses "this" to access the student's properties. Observe how "this" behaves within the class context.
+class Student {
+    constructor(name, age, grade) {
+        this.name = name;
+        this.age = age;
+        this.grade = grade;
+    }
+    info(){
+        return `${this.name} is ${this.age} and has a ${this.grade}`;
+    }
+}
+
+let student = new Student("Tim", 5, "F");
+console.log(student.info());
