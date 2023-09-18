@@ -17,18 +17,18 @@ console.log(myCar.displayInfo());
 
 // Exercise 2.1: Craft a regular function within an object, then invoke it. Observe the behavior of "this".
 objectFunction = {
-    method: function() {
+    method: function () {
         console.log(this);
-    }
-}
+    },
+};
 objectFunction.method();
 
 // Exercise 2.2: Create an arrow function within another object. Execute it and note the behavior of "this".
 objectArrow = {
     method: () => {
         console.log(this);
-    }
-}
+    },
+};
 objectArrow.method();
 
 // Exercise #3
@@ -45,7 +45,7 @@ class ElectricCar extends Car {
 }
 
 let myEV = new ElectricCar("Tesla", "Truck", 2023, 100);
-console.log(myEV.displayInfo())
+console.log(myEV.displayInfo());
 
 // Exercise #4
 // Design a class "Student". Create an instance method that uses "this" to access the student's properties. Observe how "this" behaves within the class context.
@@ -55,7 +55,7 @@ class Student {
         this.age = age;
         this.grade = grade;
     }
-    info(){
+    info() {
         return `${this.name} is ${this.age} and has a ${this.grade}`;
     }
 }
