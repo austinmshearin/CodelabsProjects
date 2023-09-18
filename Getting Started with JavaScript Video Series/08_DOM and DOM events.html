@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- OPTION 1, use onclick in HTML -->
+    <div class="jumbotron text-center">
+        <button class="btn btn-danger" , onclick="goCoocoo()">
+            Go CooCoo
+        </button>
+    </div>
+
+    <!-- OPTION 2, use events directly on the element in js -->
+    <div class="jumbotron text-center">
+        <button class="btn btn-danger coffee-btn">
+            Go Coffee
+        </button>
+    </div>
+    <div class="jumbotron text-center">
+        <button class="btn btn-danger bean-btn">
+            Go Bean
+        </button>
+        <button class="btn btn-danger bean-btn">
+            Go Bean
+        </button>
+        <button class="btn btn-danger bean-btn">
+            Go Bean
+        </button>
+    </div>
+
+    <script>
+        // Option 1
+        function goCoocoo() {
+            const body = document.querySelector('body');
+            body.style.backgroundColor = '#C00C00';
+        }
+
+        // Option 2
+        const coffeeButton = document.querySelector('.coffee-btn');
+        coffeeButton.onclick = function () {
+            document.body.style.backgroundColor = '#C0FFEE';
+        }
+        coffeeButton.onmouseenter = goCoocoo;
+
+        function getCoofee() {
+            document.body.style.backgroundColor = '#C00FEE';
+        }
+        const beanButtons = document.querySelectorAll('.bean-btn');
+        beanButtons.forEach(function (button) {
+            button.onclick = getCoofee;
+        })
+    </script>
+</body>
+
+</html>
