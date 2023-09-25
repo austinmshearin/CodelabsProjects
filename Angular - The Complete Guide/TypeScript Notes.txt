@@ -1,5 +1,8 @@
+Install the typescript package into the project folder
 npm install typescript
 
+Compile the typescript files into JavaScript files
 npx tsc
 
+Initialize the compiler config file to make modifications to the TypeScript compiler
 npx tsc --init
