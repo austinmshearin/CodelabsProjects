@@ -1,0 +1,5 @@
+npm install typescript
+
+npx tsc
+
+npx tsc --init
