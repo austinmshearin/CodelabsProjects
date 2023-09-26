@@ -1,0 +1,11 @@
+To install angular globally
+>>> npm install -g @angular/cli@latest
+
+To create an Angular project
+>>> ng new <project-name>
+Optional flag to set non strict mode: --no-strict
+angular routing? n
+style sheet? CSS
+
+To bring up a development server from the angular project directory
+>>> ng serve

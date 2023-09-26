@@ -1,0 +1,7 @@
+ng.ps1 cannot be loaded. The file C:\Users\test\AppData\Roaming\npm\ng.ps1 is not digitally signed. You cannot run this script on the current system. For more information about running scripts and setting execution policy
+
+Check execution policy for current scope
+>>> Get-ExecutionPolicy -List
+
+Set the execution policy for a scope
+>>> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
