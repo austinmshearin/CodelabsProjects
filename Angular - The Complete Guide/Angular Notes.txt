@@ -9,3 +9,10 @@ style sheet? CSS
 
 To bring up a development server from the angular project directory
 >>> ng serve
+
+To load bootstrap into the project as a module
+>>> npm install --save bootstrap@3
+
+To load bootstrap into the angular project to be used for CSS
+1) Open the angular.json file
+2) Add another entry to the "styles" array for bootstrap: "node_modules/bootstrap/dist/css/bootstrap.min.css"
