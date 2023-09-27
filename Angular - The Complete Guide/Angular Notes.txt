@@ -16,3 +16,17 @@ To load bootstrap into the project as a module
 To load bootstrap into the angular project to be used for CSS
 1) Open the angular.json file
 2) Add another entry to the "styles" array for bootstrap: "node_modules/bootstrap/dist/css/bootstrap.min.css"
+
+To add a component
+>>> ng g c <component-name>
+g is short for generate
+c is short for component
+
+The main index.html is what is served with the app-root container
+The app.module.ts file configures the module which contains all of the components
+    Each component in the module must be imported and declared
+The app.component populates the app-root container
+    The *.component.ts file configures the component
+    The *.component.html file is the template html
+    The *.component.css file styles the component
+Each sub component should go in a subdirector within the app directory
