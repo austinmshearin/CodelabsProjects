@@ -30,3 +30,36 @@ The app.component populates the app-root container
     The *.component.html file is the template html
     The *.component.css file styles the component
 Each sub component should go in a subdirector within the app directory
+
+Interpolation
+{{}} used to insert data into the HTML
+Can be properties from the typescript class {{property}} or a method {{method()}}
+Must return a string
+
+Property binding
+Wrap the property with square brackets to bind it to an expression
+[disabled] = "property" disables an HTML element if property in the typescript class is true or method returns true
+
+Event binding
+Wrap an event with parenthesis and assign it a method from the typescript class
+(click)="method()"
+
+Two way binding
+Binds an input value to the property value
+[(ngModel)] = "property"
+
+*ngIf
+Used to control if something exists on the DOM or not
+<p *ngIf="property"></p>
+
+ngStyle
+Dynamically assign styles based on conditions
+[ngStyle] = "{property: condition}"
+
+ngClass
+Dynamically add or remove classes
+[ngClass] = "{CSSClassName: condition}"
+
+ngFor
+Dynamically create more components using a for loop
+*ngFor = "let name of names"
