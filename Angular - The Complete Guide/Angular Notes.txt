@@ -7,6 +7,9 @@ Optional flag to set non strict mode: --no-strict
 angular routing? n
 style sheet? CSS
 
+To create an Angular project in the current directory instead of a subdirectory
+>>> ng new <project-name> --directory ./
+
 To bring up a development server from the angular project directory
 >>> ng serve
 
